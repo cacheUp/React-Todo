@@ -21,6 +21,13 @@ class App extends React.Component {
     };
   }
 
+  clearCompleted = e => {
+    e.preventDefault();
+    this.setState({
+      tasks: this.state.tasks.filter(task => task.completed === false)
+    });
+  };
+
   lineThrough = id => {
     console.log("function invoked!");
     this.setState({
@@ -63,6 +70,7 @@ class App extends React.Component {
       <div className="App">
         <TodoList tasks={this.state.tasks} lineThrough={this.lineThrough} />
         <TodoForm
+          clearCompleted={this.clearCompleted}
           addTask={this.addTask}
           inputText={this.state.inputText}
           handleChange={this.handleChange}
