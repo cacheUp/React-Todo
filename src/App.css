@@ -1,0 +1,6 @@
+.App {
+  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  margin-top: 20%;
+}
