@@ -9,9 +9,3 @@
 .character-header.false {
   text-decoration: none;
 }
-
-.todoForm {
-  display: grid;
-  justify-content: center;
-  margin-top: 20%;
-}
